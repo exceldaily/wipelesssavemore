@@ -278,36 +278,32 @@ h4 {
 /* ── Hero ── */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(145deg, #082828 0%, #1E5F5E 55%, #2d7a62 100%);
   position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
   padding: 8rem 0 5rem;
+  background:
+    linear-gradient(to right,
+      #082828 0%,
+      #082828 38%,
+      rgba(8,40,40,0.92) 50%,
+      rgba(8,40,40,0.45) 68%,
+      rgba(8,40,40,0.08) 100%
+    ),
+    url('hero.jpg') right center / cover no-repeat;
 }
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 60% 80% at 75% 45%, rgba(184,147,90,0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 60% at 15% 80%, rgba(82,183,136,0.22) 0%, transparent 55%);
+  background: radial-gradient(ellipse 40% 60% at 20% 75%, rgba(82,183,136,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
-  background-size: 48px 48px;
-  pointer-events: none;
-}
+.hero::after { display: none; }
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  display: block;
+  max-width: 640px;
   position: relative;
   z-index: 1;
 }
@@ -361,19 +357,7 @@ h4 {
 .hero-stat-label { font-size: var(--fs-xs); color: rgba(255,255,255,0.6); margin-top: 4px; }
 
 /* Hero Visual */
-.hero-visual { position: relative; display: flex; justify-content: center; }
-.hero-img-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 520px;
-  aspect-ratio: 4/3;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow:
-    0 40px 80px rgba(0,0,0,0.45),
-    0 0 0 1px rgba(255,255,255,0.1);
-}
-.hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: right center; }
+.hero-visual { display: none; }
 .hero-placeholder-img {
   width: 100%;
   height: 100%;
@@ -985,14 +969,11 @@ h4 {
   :root { --container-pad: 1.25rem; }
   .nav-links  { display: none; }
   .hamburger  { display: flex; }
-  .hero { padding: 6rem 0 4rem; min-height: auto; }
-  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
+  .hero { padding: 6rem 0 4rem; min-height: auto; background-position: 80% center; }
+  .hero-inner { text-align: center; max-width: 100%; }
   .hero-sub   { margin-left: auto; margin-right: auto; }
   .hero-actions { justify-content: center; }
   .hero-stats   { justify-content: center; }
-  .hero-visual  { order: -1; }
-  .hero-img-wrap { max-width: 300px; margin: 0 auto; }
-  .hero-badge   { display: none; }
   .benefits-grid,
   .products-grid,
   .testimonials-grid,

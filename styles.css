@@ -160,7 +160,7 @@ h4 {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  padding: 1.375rem 0;
+  padding: 0.875rem 0;
   transition: var(--transition);
 }
 .nav.scrolled {
@@ -168,7 +168,7 @@ h4 {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 1px 24px rgba(0,0,0,0.08);
-  padding: 1rem 0;
+  padding: 0.625rem 0;
 }
 .nav-inner {
   display: flex;
@@ -183,13 +183,14 @@ h4 {
   transition: var(--transition);
 }
 
-/* Logo image — shown on dark (unscrolled) nav */
+/* Logo image */
 .nav-logo-img {
-  height: 52px;
+  height: 80px;
   width: auto;
   display: block;
   transition: var(--transition);
 }
+.nav.scrolled .nav-logo-img { height: 64px; }
 
 /* Text logo — shown on light (scrolled) nav */
 .nav-logo-text {

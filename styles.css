@@ -177,15 +177,43 @@ h4 {
   gap: 2rem;
 }
 .nav-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+/* Logo image — shown on dark (unscrolled) nav */
+.nav-logo-img {
+  height: 52px;
+  width: auto;
+  display: block;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+/* Text logo — shown on light (scrolled) nav */
+.nav-logo-text {
+  display: none;
   font-family: var(--ff-display);
   font-size: 1.375rem;
   font-weight: var(--fw-bold);
-  color: var(--clr-white);
-  transition: var(--transition);
+  color: var(--clr-primary);
   letter-spacing: -0.01em;
-  flex-shrink: 0;
 }
-.nav.scrolled .nav-logo { color: var(--clr-primary); }
+
+/* Swap: hide image, show text when nav is light */
+.nav.scrolled .nav-logo-img  { display: none; }
+.nav.scrolled .nav-logo-text { display: block; }
+
+/* Footer logo */
+.footer-logo-img {
+  height: 80px;
+  width: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+}
 .nav-links {
   display: flex;
   gap: 2rem;

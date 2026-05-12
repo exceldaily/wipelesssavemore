@@ -322,7 +322,7 @@ h4 {
       rgba(8,40,40,0.45) 68%,
       rgba(8,40,40,0.08) 100%
     ),
-    url('hero.jpg') right center / cover no-repeat;
+    url('best-bidet-toilet-attachment.jpeg') right center / cover no-repeat;
 }
 .hero::before {
   content: '';

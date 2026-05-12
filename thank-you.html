@@ -56,7 +56,7 @@
   </div>
 </div>
 
-<!-- Google Analytics — Conversion Event -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0L2VNDKQZF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -68,6 +68,16 @@
     event_label:    'bidet_attachment_order',
     value:          380
   });
+</script>
+
+<!-- Google Ads — Conversion -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1000892273"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-1000892273');
+  gtag('event', 'conversion', { 'send_to': 'AW-1000892273' });
 </script>
 
 </body>
